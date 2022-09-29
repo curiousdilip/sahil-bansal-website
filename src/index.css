@@ -2,9 +2,13 @@
 
 @tailwind base;
 @tailwind components;
-@tailwind uitilies;
+@tailwind utilities;
 
 
 body{
     font-family: "Jost",sans-serif;
+}
+
+body::-webkit-scrollbar, html::-webkit-scrollbar{
+    display: none;
 }
