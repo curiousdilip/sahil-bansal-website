@@ -1,10 +1,14 @@
 import React from "react";
 // import {Spline} from "@splinetool/react-spline"
 import { useState } from "react";  
-import { IoMenu } from "react-icons/io5";
+import { IoMenu,IoLogoGithub } from "react-icons/io5";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { Experience } from "./data";
+import { Experience, Projects, SocialLinks } from "./data";
+import sahilImg from "./img/sahil.jpg"
+import BgImg from "./img/bgimg.jpg"
+import { motion } from "framer-motion"
+
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -105,7 +109,7 @@ function App() {
       </nav>
       <div className="relative" id="home">
         {/* <Spline scene="https://prod.spline.design/7S3xzYChFhqkgUan/scene.splinecode" /> */}
-        <img src="https://source.unsplash.com/random/?Cryptocurrency/" alt="" />
+        <img src={BgImg} alt="" />
 
         <div className="absolute bottom-10 w-full flex justify-center items-center">
             <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl ">
@@ -127,7 +131,7 @@ function App() {
             <div className="w-full h-420 flex items-center justify-center">
               <div className="w-275 h-340 relative bg-emerald-200 rounded-md">
                 <img
-                  src="https://source.unsplash.com/random/?photo/"
+                  src={sahilImg}
                   alt=""
                   className="w-full h-full absolute -right-4 top-4 object-cover rounded-lg drop-shadow-2xl"
                 />
@@ -182,6 +186,64 @@ function App() {
                   </VerticalTimelineElement>
                 ))}
             </VerticalTimeline>
+          </section>
+
+
+          <section
+            className="flex flex-wrap items-center justify-evenly my-24 gap-4"
+            id="projects"
+          >
+          {Projects &&
+              Projects.map((n, i) => (
+                <div
+                  key={n.id}
+                  className="border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out"
+                >
+                  <p className="text-lg text-textBase font-medium uppercase">
+                    {n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
+                  </p>
+
+                  <img
+                    src={n.imageSrc}
+                    className="w-full h-full object-cover rounded-md my-4"
+                    alt=""
+                  />
+
+                  <div className="flex flex-1 items-center justify-between">
+                    <p className="text-lg text-gray-300">
+                      Technologies
+                      <span className="block text-sm text-gray-500">
+                        {n.techs}
+                      </span>
+                    </p>
+                    <a href={n.github}>
+                      <div whileTap={{ scale: 0.5 }}>
+                        <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              ))}
+          </section>
+          <section
+            id="contacts"
+            className="flex flex-col items-center justify-evenly w-full my-24"
+          >
+            <p className="text-2xl text-gray-400 capitalize">Follow me on</p>
+            <div className="flex items-center justify-evenly w-full my-4 flex-wrap gap-4">
+              {SocialLinks &&
+                SocialLinks.map((n) => (
+                  <a
+                    whileTap={{ scale: 0.8 }}
+                    href={n.link}
+                    key={n.id}
+                    className="w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3"
+                  >
+                    {n.iconSrc}
+                    <p className="text-lg text-textBase">{n.name}</p>
+                  </a>
+                ))}
+            </div>
           </section>
       </main>
     </div>
