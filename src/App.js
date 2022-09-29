@@ -7,12 +7,13 @@ import 'react-vertical-timeline-component/style.min.css';
 import { Experience, Projects, SocialLinks } from "./data";
 import sahilImg from "./img/sahil.jpg"
 import BgImg from "./img/bgimg.jpg"
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 
 
 function App() {
   const [isActive, setIsActive] = useState(false);
   return (
+    <AnimatePresence initial={false}>
     <div className="flex w-screen h-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
       {/* -------------------------------- Navbar ---------------------------------- */}
 
@@ -45,23 +46,23 @@ function App() {
             >
               Contact
             </a>
-            <a
+            <motion.a whileTap={{scale:0.8}}
               href="#"
               className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
             >
               Download
-            </a>
+            </motion.a>
           </div>
 
-          <div
+          <motion.div
               whileTap={{ scale: 0.6 }}
               className="block md:hidden  ml-auto cursor-pointer"
               onClick={() => setIsActive(!isActive)}
             >
               <IoMenu className="text-2xl text-textBase " />
-            </div>
+            </motion.div>
             {isActive && (
-              <div
+              <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1.1 }}
                 exit={{ opacity: 0, scale: 0.5 }}
@@ -103,7 +104,7 @@ function App() {
                 >
                   Download
                 </a>
-              </div>
+              </motion.div>
             )}
         </div>
       </nav>
@@ -150,11 +151,11 @@ function App() {
                 vero nobis assumenda commodi magni.
               </p>
 
-              <button class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
+              <motion.button whileTap={{scale:0.6}} class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
                 <span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                   Download
                 </span>
-              </button>
+              </motion.button>
             </div>
           </section>
         {/*------------------------ timeline section ------------------------ */}
@@ -216,11 +217,11 @@ function App() {
                         {n.techs}
                       </span>
                     </p>
-                    <a href={n.github}>
+                    <motion.a whileTap={{scale:0.6}}  href={n.github}>
                       <div whileTap={{ scale: 0.5 }}>
                         <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
                       </div>
-                    </a>
+                    </motion.a>
                   </div>
                 </div>
               ))}
@@ -233,7 +234,7 @@ function App() {
             <div className="flex items-center justify-evenly w-full my-4 flex-wrap gap-4">
               {SocialLinks &&
                 SocialLinks.map((n) => (
-                  <a
+                  <motion.a
                     whileTap={{ scale: 0.8 }}
                     href={n.link}
                     key={n.id}
@@ -241,12 +242,13 @@ function App() {
                   >
                     {n.iconSrc}
                     <p className="text-lg text-textBase">{n.name}</p>
-                  </a>
+                  </motion.a>
                 ))}
             </div>
           </section>
       </main>
     </div>
+    </AnimatePresence>
   );
 }
 
