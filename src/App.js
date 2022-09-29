@@ -1,8 +1,10 @@
 import React from "react";
 // import {Spline} from "@splinetool/react-spline"
-import { useState } from "react";
-
+import { useState } from "react";  
 import { IoMenu } from "react-icons/io5";
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import { Experience } from "./data";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -150,6 +152,36 @@ function App() {
                 </span>
               </button>
             </div>
+          </section>
+        {/*------------------------ timeline section ------------------------ */}
+          <section className="w-full flex items-center justify-center">
+            <VerticalTimeline>
+              {Experience &&
+                Experience.map((n) => (
+                  <VerticalTimelineElement
+                    key={n.id}
+                    className="vertical-timeline-element--work"
+                    contentStyle={{
+                      background: "rgb(21, 24, 31)",
+                      color: "#888",
+                    }}
+                    contentArrowStyle={{
+                      borderRight: "7px solid  rgb(21, 24, 31)",
+                    }}
+                    date={n.date}
+                    iconStyle={{ background: "rgb(21, 24, 31)", color: "#888" }}
+                    icon={n.iconsSrc}
+                  >
+                    <h3 className="vertical-timeline-element-title">
+                      {n.title}
+                    </h3>
+                    <h4 className="vertical-timeline-element-subtitle">
+                      {n.location}
+                    </h4>
+                    <p>{n.description}</p>
+                  </VerticalTimelineElement>
+                ))}
+            </VerticalTimeline>
           </section>
       </main>
     </div>
