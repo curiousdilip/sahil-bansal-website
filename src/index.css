@@ -8,6 +8,7 @@
 body{
     font-family: "Jost",sans-serif;
     scroll-behavior: smooth;
+    margin: 0;
 }
 
 html{
@@ -17,3 +18,8 @@ html{
 body::-webkit-scrollbar, html::-webkit-scrollbar{
     display: none;
 }
+/* 
+canvas{
+    height: 627px !important;
+    width: 771px !important;
+} */
