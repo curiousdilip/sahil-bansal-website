@@ -18,8 +18,3 @@ html{
 body::-webkit-scrollbar, html::-webkit-scrollbar{
     display: none;
 }
-/* 
-canvas{
-    height: 627px !important;
-    width: 771px !important;
-} */
