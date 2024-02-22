@@ -1,95 +1,91 @@
-import { IoCodeWorking, IoLogoGithub, IoLogoLinkedin, IoLogoTwitter, IoMail } from "react-icons/io5";
-import BgImg from "./img/bgimg.jpg"
+import {
+  IoCodeWorking,
+  //   IoLogoGithub,
+  IoLogoLinkedin,
+  IoLogoTwitter,
+  IoMail,
+} from "react-icons/io5";
+import BgImg from "./img/bgimg.jpg";
 
-export const Experience=[
- {    id: 1,
-    date: "2016 - present",
+export const Experience = [
+  {
+    id: 1,
+    date: "March 2023 - present",
     iconsSrc: <IoCodeWorking />,
-    title: "Creative Director",
-    location: "Doha, Qatar",
+    title: "Senior Digital Analytics Consultant",
+    location: "New Delhi, India",
     description:
-      "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+      "Working with Adobe Analytics for insights and data lake from AWS to interpret data and create story-driven dashboards for Analytical Consumption.",
   },
   {
     id: 2,
-    date: "2014 - 2016",
+    date: "Jan 2023 - May 2023",
     iconsSrc: <IoCodeWorking />,
-    title: "Creative Director",
-    location: "Doha, Qatar",
+    title: "Associate Process Manager",
+    location: "Chandigarh India",
     description:
-      "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+      "Working as an Conversion Rate Optimization Consultant, using tools like Adobe Analytics, Google Analytics, Optimizely, Monetate etc. To increase the conversion rate of websites across multiple regions.",
   },
   {
     id: 3,
-    date: "2012 - 2014",
+    date: "April 2020 - Dec 2021",
     iconsSrc: <IoCodeWorking />,
-    title: "Creative Director",
-    location: "Doha, Qatar",
+    title: "Analytics Strategist",
+    location: "New Delhi, India",
     description:
-      "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+      "Worked as a Marketing Strategist for Multiple E-commerce Websites, working on the CRO of multiple websites and building dashboards in data studio and excel. Analyzed google analytics and google ads data to find insights into optimizing the e-commerce business for maximum returns.",
   },
   {
     id: 4,
-    date: "2011 - 2012",
+    date: "Jul 2017 - Dec 2021",
     iconsSrc: <IoCodeWorking />,
-    title: "Creative Director",
-    location: "Doha, Qatar",
+    title: "Professional Freelancer",
+    location: "New Delhi, India",
     description:
-      "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+      "Had a successful freelance setup where I worked with 100+ clients to fulfill their marketing and video ads requirements for their dropshipping and conventional business.",
   },
   {
     id: 5,
-    date: "2010 - 2011",
+    date: "Sep 2018 - Nov 2018",
     iconsSrc: <IoCodeWorking />,
-    title: "Creative Director",
-    location: "Doha, Qatar",
+    title: "Marketing Specialist",
+    location: "New Delhi, New Delhi",
     description:
-      "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+      "Worked as Marketing Strategist in their Marketing for Google Ad Grants Online Challenge. Handled Google Search Ads, Fb Ads, and Linkedin Ads for their Marketing Profile.",
   },
+];
 
-]
+export const Projects = [
+  {
+    id: 1,
+    name: "MPAA",
+    imageSrc: BgImg,
+    techs: "Wordpress, Digital Ocean",
+    github: "#",
+  },
+];
 
-
-export const Projects=[
-    {
-        id:1,
-        name:"abc",
-        imageSrc:BgImg,
-        techs:"rectjs,redux,material ui",
-        github:"#",
-    },
-    {
-        id:2,
-        name:"abc",
-        imageSrc:BgImg,
-        techs:"rectjs,redux,material ui",
-        github:"#",
-    },
-]
-
-export const SocialLinks=[
-    {
-        id:1,
-        iconSrc:<IoLogoGithub className="text-textBase text-3xl cursor-pointer"/>,
-        name:"Github",
-        link:"#",
-    },
-    {
-        id:2,
-        iconSrc:<IoLogoTwitter className="text-textBase text-3xl cursor-pointer"/>,
-        name:"Twitter",
-        link:"#",
-    },
-    {
-        id:3,
-        iconSrc:<IoLogoLinkedin className="text-textBase text-3xl cursor-pointer"/>,
-        name:"LinkedIn",
-        link:"#",
-    },
-    {
-        id:4,
-        iconSrc:<IoMail className="text-textBase text-3xl cursor-pointer"/>,
-        name:"Mail",
-        link:"#",
-    },
-]
+export const SocialLinks = [
+  {
+    id: 1,
+    iconSrc: (
+      <IoLogoTwitter className="text-textBase text-3xl cursor-pointer" />
+    ),
+    name: "Twitter",
+    link: "https://www.twitter.com/Infinitmac",
+  },
+  {
+    id: 2,
+    iconSrc: (
+      <IoLogoLinkedin className="text-textBase text-3xl cursor-pointer" />
+    ),
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/sahil1996/",
+  },
+  {
+    id: 3,
+    iconSrc: <IoMail className="text-textBase text-3xl cursor-pointer" />,
+    name: "Mail",
+    link: "mailto:infinimac@gmail.com",
+  },
+];

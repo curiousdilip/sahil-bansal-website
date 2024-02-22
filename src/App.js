@@ -1,4 +1,4 @@
-import  Spline  from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline";
 import Sahil from "./img/sahil.jpg";
 import {
   VerticalTimeline,
@@ -44,7 +44,8 @@ function App() {
               >
                 Contact
               </a>
-              <motion.a whileTap={{scale:0.8}}
+              <motion.a
+                whileTap={{ scale: 0.8 }}
                 href="#contact"
                 className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
               >
@@ -108,7 +109,7 @@ function App() {
         </nav>
 
         <div className="relative w-[80%] h-screen" id="home">
-        <Spline scene="https://prod.spline.design/oo6IxFu8UDjFUmjD/scene.spline" />
+          <Spline scene="https://prod.spline.design/oo6IxFu8UDjFUmjD/scene.spline" />
           <div className="absolute bottom-10 w-full flex justify-center items-center">
             <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl ">
               <p className="text-white">Press and drag to orbit</p>
@@ -132,17 +133,17 @@ function App() {
             </div>
             <div className="w-full h-420 flex flex-col items-center justify-center ">
               <p className="text-lg text-textBase text-center">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente dicta recusandae commodi praesentium officia, aliquam
-                cumque voluptatem dolor enim ducimus id maiores consequatur
-                dolorem! Architecto aperiam corrupti nostrum eum similique!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis saepe dolor illo. Tenetur labore impedit nihil natus
-                explicabo perspiciatis nisi autem aut numquam dolorum, voluptas
-                vero nobis assumenda commodi magni.
+                A highly analytical and detail-oriented Data Analyst with 3.5+
+                of experience in data management, statistical analysis, and data
+                visualization seeking to utilize my skills and experience to
+                contribute to the company's growth and provide valuable insights
+                for strategic decision-making.
               </p>
 
-              <motion.button whileTap={{scale:0.8}} class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
+              <motion.button
+                whileTap={{ scale: 0.8 }}
+                class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80"
+              >
                 <span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                   Download
                 </span>
